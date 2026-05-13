@@ -106,12 +106,26 @@ public class VendingMachineGUI extends JFrame {
         });
 
         clearBtn.addActionListener(e -> {
-            machine.clear();
+            selectedLbl.setText("None");
+            priceLbl.setText("₱0");
             cashLbl.setText("₱0");
             changeLbl.setText("₱0");
             moneyInput.setText("0");
-            messageLbl.setText("Cleared.");
         });
+
+        cancelBtn.addActionListener(e -> {
+        machine.clear(); 
+    
+        selectedLbl.setText("None");
+        priceLbl.setText("₱0");
+        cashLbl.setText("₱0");
+        changeLbl.setText("₱0");
+        moneyInput.setText("0");
+    
+    // 3. Update the message at the bottom
+    messageLbl.setText("Transaction Cancelled.");
+    messageLbl.setForeground(Color.RED);
+});
 
         controls.add(buyBtn); controls.add(clearBtn); controls.add(cancelBtn);
         bottomPanel.add(messageLbl, BorderLayout.CENTER);
