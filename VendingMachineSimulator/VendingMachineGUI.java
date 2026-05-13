@@ -122,9 +122,8 @@ public class VendingMachineGUI extends JFrame {
         changeLbl.setText("₱0");
         moneyInput.setText("0");
     
-    // 3. Update the message at the bottom
-    messageLbl.setText("Transaction Cancelled.");
-    messageLbl.setForeground(Color.RED);
+        messageLbl.setText("Transaction Cancelled.");
+        messageLbl.setForeground(Color.RED);
 });
 
         controls.add(buyBtn); controls.add(clearBtn); controls.add(cancelBtn);
